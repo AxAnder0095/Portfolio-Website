@@ -1,0 +1,16 @@
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    // border: 1px solid #000000;
+    color: rgba($color: #FFFFFF, $alpha: 0.5);
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #000000;
+        font-size: 1.1rem;
+    }
+}

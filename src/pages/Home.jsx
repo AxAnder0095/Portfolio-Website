@@ -1,9 +1,15 @@
+import { Hero } from "../components/Hero";
+import '../styles/Home.scss'
+
 export const Home = () => {
     return (
         <div>
             <header>
-                <h1>Home</h1>
+                <Hero />
             </header>
+            <main className="main">
+                
+            </main>
         </div>
     )
 };
