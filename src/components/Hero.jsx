@@ -1,4 +1,4 @@
-import { Navbar } from "./NavBar";
+// import { Navbar } from "./NavBar";
 import '../styles/Hero.scss'
 
 export const Hero = () => {
@@ -6,7 +6,6 @@ export const Hero = () => {
         <div className="hero">
             <div className="hero-content">
                 <div className="hero-nav">
-                    <Navbar />
                 </div>
                 <div className="hero-main">
                     <div className="hero-main-content">

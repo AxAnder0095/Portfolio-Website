@@ -6,7 +6,11 @@
 
 :root {
   font-size: 14px;
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: 'space mono', monospace;
+  /* font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif; */
 }
 
+body, html {
+  background-color: #111111;
+}
 
