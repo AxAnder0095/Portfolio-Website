@@ -6,7 +6,7 @@
 
 .information {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -15,14 +15,6 @@
 }
 
 .about {
-    // border: 1px solid black;
-
-    .intro-title {
-        background-color: #AAFFC4;
-        padding: 0.5rem;
-        font-size: 1.1rem;
-    }
-
     .intro-wrapper {
         background-color: #F4F4F4;
         color: black;
@@ -61,20 +53,23 @@
 .projects {
     // border: 1px solid black;
 
-    .project-title {
+    .project-wrapper {
+        background-color: #F4F4F4;
+        color: black;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        
+        div {
+            border: 1px solid black;
+        }
+    }
+
+}
+
+.title {
         background-color: #AAFFC4;
         padding: 0.5rem;
         font-size: 1.1rem;
     }
-
-    .project-wrapper {
-        background-color: #F4F4F4;
-        color: black;
-        display: flex;
-        padding: 2rem;
-        // border: 1px solid black;
-    }
-
-    
-
-}

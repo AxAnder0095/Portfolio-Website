@@ -2,11 +2,12 @@ import { Navbar } from "../components/NavBar.jsx";
 import '../styles/Home.scss'
 import myImage from '../imgs/thumb2.jpg'
 import { Link } from "react-router-dom";
-import { RandomReveal } from "react-random-reveal";
 import { useState } from "react";
+import { Reveal } from "../components/Reveal.jsx";
+import { Projects } from "../components/Projects.jsx";
 
 export const Home = () => {
-    const [key, setKey] = useState(0);
+    // const [key, setKey] = useState(0);
     return (
         <div className="home-container">
             <header>
@@ -15,20 +16,8 @@ export const Home = () => {
             <main className="main">
                 <section className="information">
                     <article className="about">
-                        <p className="intro-title">
-                            <RandomReveal
-                                key={key}
-                                isPlaying={true}
-                                duration={2}
-                                characters={"INTRODUCTION"}
-                                characterSet={['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']}
-                                updateInterval={0.05}
-                                onComplete={() => {
-                                    setTimeout(() => {
-                                        setKey(prev => prev + 1);
-                                    }, 10000);
-                                }}
-                            />
+                        <p className="title">
+                            <Reveal word="INTRODUCTION" />
                         </p>
                         <div className="intro-wrapper">
                             <div className="intro-img">
@@ -37,8 +26,8 @@ export const Home = () => {
                             <div className="intro-desc">
                                 <p className="subtitle">Hello, my name is</p>
                                 <p style={{ fontSize: "4.5rem" }}>ALEXANDER BROWN</p>
-                                <p className="subtitle">I’m a front end developer that takes passion in ux <br />
-                                    design and maintainable code
+                                <p className="subtitle">
+                                    {"I’m a front-end and full-stack developer passionate about building responsive, user-focused web applications. I enjoy continuously expanding my skills through hands-on projects."}
                                 </p>
                                 <div className="intro-buttons">
                                     <Link to='/projects' className="intro-btn">GITHUB</Link>
@@ -48,10 +37,18 @@ export const Home = () => {
                         </div>
                     </article>
                     <article className="projects">
-                        <p className="project-title">PROJECTS</p>
+                        <p className="title">PROJECTS</p>
                         <div className="project-wrapper">
-
-
+                            {Projects.map((project, index) => (
+                                <div key={index}>
+                                    <div className="project-header">
+                                        <p>{project.title}</p>
+                                        {project.techStack.map((icon, i) => (
+                                            <span key={i}>{icon}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </article>
                     <article className="projects">
